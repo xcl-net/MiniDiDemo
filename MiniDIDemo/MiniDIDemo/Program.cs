@@ -33,7 +33,8 @@ namespace MiniDIDemo
 
             //3. 从容器中获取对象；
 
-            UsersService user = container.GetService<UsersService>();
+            // 基于接口编程
+            IUser user = container.GetService<IUser>();
             user.MyName("peter");
             user.MyCarName();
 
